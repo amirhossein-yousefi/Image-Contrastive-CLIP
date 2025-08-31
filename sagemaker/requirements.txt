@@ -1,0 +1,9 @@
+torch>=2.1
+torchvision>=0.16
+timm>=0.9
+open-clip-torch>=3.0
+Pillow>=10.0
+
+# sagemaker & optional experiment logging
+sagemaker>=2.200
+boto3>=1.28

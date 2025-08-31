@@ -41,7 +41,7 @@ def main():
     # Load model & processor (works for CLIP or SigLIP)
     attn_impl = "sdpa"
     model = AutoModel.from_pretrained(
-        r"C:\Users\amiru\PycharmProjects\Image-Contrastive\src\runs\clip-finetune-flickr30k",
+        r"....src\runs\clip-finetune-flickr30k",
         attn_implementation=attn_impl,
         torch_dtype=torch.float16 if args.fp16 else None,
     )
@@ -71,7 +71,7 @@ def main():
             eval_bs_images=args.eval_bs, eval_bs_texts=max(128, args.eval_bs), is_siglip=is_siglip
         )
     import json
-    with open(os.path.join(r"C:\Users\amiru\PycharmProjects\Image-Contrastive\src\runs\clip-finetune-flickr30k" ,"test_metric.json"), "w") as f:
+    with open(os.path.join(r"....src\runs\clip-finetune-flickr30k" ,"test_metric.json"), "w") as f:
         json.dump({k: (None if v is None else float(v)) for k, v in test_metric.items()}, f, indent=2)
 
 if __name__ == '__main__':

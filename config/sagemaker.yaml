@@ -1,0 +1,4 @@
+region: us-east-1
+default_instance_type: ml.g5.4xlarge
+train_s3: s3://<your-bucket>/<your-prefix>/train/
+model_package_group_name: CLIPContrastive
